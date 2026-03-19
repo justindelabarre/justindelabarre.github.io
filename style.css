@@ -79,6 +79,25 @@ a:hover { text-decoration: underline; }
   font-weight: 300;
 }
 
+/* ── Header photo ── */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-text { flex: 1; }
+
+.profile-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
 /* ── Body: 2 colonnes ── */
 .cv-body {
   display: flex;

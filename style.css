@@ -1,0 +1,340 @@
+/* ============================================
+   CV Justin Delabarre — Shared Stylesheet
+   Style: Editorial élégant, 2 colonnes
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── Variables ── */
+:root {
+  --col-left-width: 62%;
+  --col-right-width: 38%;
+  --color-bg: #fafaf8;
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-muted: #6b6b6b;
+  --color-accent: #2c2c2c;
+  --color-border: #e0ddd8;
+  --color-tag-bg: #f0ede8;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --sidebar-bg: #f4f1ec;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 15px; }
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Page wrapper ── */
+.cv-page {
+  max-width: 900px;
+  margin: 40px auto;
+  background: var(--color-surface);
+  box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+.cv-header {
+  padding: 48px 48px 36px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cv-header h1 {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--color-accent);
+  text-transform: uppercase;
+}
+
+.cv-header .subtitle {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--color-muted);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+}
+
+.cv-header .tagline {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  margin-top: 14px;
+  max-width: 560px;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ── Body: 2 colonnes ── */
+.cv-body {
+  display: flex;
+  flex: 1;
+}
+
+/* ── Colonne principale (gauche) ── */
+.cv-main {
+  width: var(--col-left-width);
+  padding: 40px 40px 40px 48px;
+  border-right: 1px solid var(--color-border);
+}
+
+/* ── Sidebar (droite) ── */
+.cv-sidebar {
+  width: var(--col-right-width);
+  padding: 40px 36px 40px 32px;
+  background: var(--sidebar-bg);
+}
+
+/* ── Sections ── */
+.section { margin-bottom: 36px; }
+.section:last-child { margin-bottom: 0; }
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.5;
+}
+
+/* ── Expériences ── */
+.experience-item { margin-bottom: 24px; }
+.experience-item:last-child { margin-bottom: 0; }
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.exp-company {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.exp-role {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  font-weight: 400;
+  margin-top: 1px;
+}
+
+.exp-date {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  font-weight: 300;
+  white-space: nowrap;
+  font-style: italic;
+}
+
+.exp-bullets {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.exp-bullets li {
+  font-size: 0.85rem;
+  color: #3a3a3a;
+  line-height: 1.65;
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.exp-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* ── Formation ── */
+.edu-item { margin-bottom: 20px; }
+.edu-item:last-child { margin-bottom: 0; }
+
+.edu-school {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.edu-degree {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: 2px;
+}
+
+.edu-detail {
+  font-size: 0.82rem;
+  color: #888;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.edu-date {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* ── Sidebar: Compétences ── */
+.skills-group { margin-bottom: 20px; }
+.skills-group-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-tag {
+  background: #e8e4dd;
+  color: #3a3a3a;
+  font-size: 0.78rem;
+  font-weight: 400;
+  padding: 3px 10px;
+  border-radius: 2px;
+  letter-spacing: 0.02em;
+}
+
+/* ── Sidebar: Contact ── */
+.contact-list { list-style: none; }
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.83rem;
+  color: var(--color-muted);
+  margin-bottom: 8px;
+}
+
+.contact-list li svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.contact-list a:hover { color: var(--color-accent); }
+
+/* ── Sidebar: Langues ── */
+.lang-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.83rem;
+  margin-bottom: 7px;
+  color: var(--color-text);
+}
+
+.lang-level {
+  color: var(--color-muted);
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* ── Sidebar: Centres d'intérêts ── */
+.interest-item {
+  margin-bottom: 10px;
+}
+.interest-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin-bottom: 2px;
+}
+.interest-desc {
+  font-size: 0.81rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+/* ── Switcher langue + Download ── */
+.cv-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 48px;
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.lang-switcher a {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.lang-switcher a.active, .lang-switcher a:hover { color: #fff; }
+.lang-switcher span { color: rgba(255,255,255,0.3); margin: 0 6px; }
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: 2px;
+  transition: opacity 0.2s;
+}
+.btn-download:hover { opacity: 0.85; text-decoration: none; }
+.btn-download svg { width: 13px; height: 13px; }
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+  .cv-page { margin: 0; box-shadow: none; }
+  .cv-topbar { padding: 12px 20px; }
+  .cv-header { padding: 32px 20px 24px; }
+  .cv-header h1 { font-size: 2.2rem; }
+  .cv-body { flex-direction: column; }
+  .cv-main { width: 100%; padding: 28px 20px; border-right: none; border-bottom: 1px solid var(--color-border); }
+  .cv-sidebar { width: 100%; padding: 28px 20px; }
+}

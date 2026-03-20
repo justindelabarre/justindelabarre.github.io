@@ -63,8 +63,8 @@ a:hover { text-decoration: underline; }
 
 .cv-header .subtitle {
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--color-muted);
   margin-top: 4px;
   letter-spacing: 0.04em;
